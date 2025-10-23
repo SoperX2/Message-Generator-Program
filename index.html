@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            margin-bottom: 2rem;
+        }
+        #message {
+            font-size: 1.5rem;
+            margin: 2rem 0;
+            min-height: 3rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        button {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            background: white;
+            color: #667eea;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Message Generator</h1>
+        <div id="message">Click the button to generate a message!</div>
+        <button onclick="generateAndDisplay()">Generate Message</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function generateAndDisplay() {
+            const message = randomMessage();
+            document.getElementById('message').textContent = message;
+        }
+    </script>
+</body>
+</html>
