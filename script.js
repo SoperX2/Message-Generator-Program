@@ -18,4 +18,3 @@ function randomMessage() {
   return `${randomValue1} ${randomValue2} ${randomValue3}`;
 }
 
-console.log(randomMessage());
